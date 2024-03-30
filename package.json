@@ -5,6 +5,10 @@
     "version": "0.6.0",
     "publisher": "Y-Ysss",
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Y-Ysss/vscode-cisco-config-highlight.git"
+    },
     "engines": {
         "vscode": "^1.52.0"
     },
@@ -109,20 +113,16 @@
         ]
     },
     "scripts": {
-        "vscode:prepublish": "yarn run compile",
+        "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
         "watch": "tsc -watch -p ./"
     },
-    "devDependencies": {
-        "@types/semver": "^7.3.9",
-        "@types/vscode": "^1.52.0",
-        "typescript": "^4.2.2"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Y-Ysss/vscode-cisco-config-highlight.git"
-    },
     "dependencies": {
-        "semver": "^7.3.7"
+        "semver": "^7.5.2"
+    },
+    "devDependencies": {
+        "@types/semver": "^7.5.2",
+        "@types/vscode": "^1.52.0",
+        "typescript": "^5.4.3"
     }
 }
