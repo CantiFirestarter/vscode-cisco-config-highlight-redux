@@ -68,7 +68,7 @@ class CiscoConfigDocumentSymbolProvider implements vscode.DocumentSymbolProvider
       let base_node = symbols;
       let parent_node = symbols;
       text.split(/\r?\n/).forEach((item: string, i: number) => {
-        const m: RegExpMatchArray | null = item.match(patterns.value || '');
+        const m: RegExpMatchArray | null = item.match(patterns.value ?? '');
         if (!m?.groups) {
           return;
         }

@@ -1,21 +1,25 @@
 import * as semver from 'semver';
 import * as vscode from 'vscode';
+import { outputChannel } from './extension';
 import { notificationConditions, NotificationInfo } from './notificationConditions';
 
-export function registerUpdateInfo(context: vscode.ExtensionContext) {
-  // console.log('Hello');
+export async function registerUpdateInfo(
+  context: vscode.ExtensionContext,
+): Promise<void> {
   const versionKey = `previous_version`;
   context.globalState.setKeysForSync([versionKey]);
 
   // https://code.visualstudio.com/api/extension-capabilities/common-capabilities
   const previousVersion: string | undefined = context.globalState.get(versionKey);
-  const currentVersion = context.extension.packageJSON.version;
-  context.globalState.update(versionKey, currentVersion);
-  // context.globalState.update(versionKey, '0.3.6');   // -----------------------------DEBUG
-  // console.log(context.globalState.keys());
-  console.log(previousVersion, currentVersion);
-
+  const currentVersion = (context.extension as Extension).packageJSON.version;
+  await context.globalState.update(versionKey, currentVersion);
+  outputChannel.appendLine(
+    `previousVersion: ${previousVersion}, currentVersion:${currentVersion}`,
+  );
   if (previousVersion && isIgnore(previousVersion, currentVersion)) {
+    outputChannel.appendLine(
+      `Is patch version. previousVersion: ${previousVersion}, currentVersion:${currentVersion}`,
+    );
     return;
   }
   notificationConditions.forEach(info => {
@@ -23,9 +27,14 @@ export function registerUpdateInfo(context: vscode.ExtensionContext) {
       const prev = previousVersion ? previousVersion : 'undefined';
       let message = info.messege.split('${previousVersion}').join(prev);
       message = message.split('${currentVersion}').join(currentVersion);
+      outputChannel.appendLine(message);
       const dialog = getDialog(info, message);
-      dialog.then(() => {
-        info.action(prev, currentVersion);
+      void dialog.then(async () => {
+        try {
+          await info.action(prev, currentVersion);
+        } catch (err) {
+          outputChannel.appendLine(String(err));
+        }
       });
     }
   });
