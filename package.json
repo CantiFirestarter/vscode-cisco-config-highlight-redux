@@ -10,7 +10,7 @@
     "url": "https://github.com/Y-Ysss/vscode-cisco-config-highlight.git"
   },
   "engines": {
-    "vscode": "^1.52.0"
+    "vscode": "^1.63.0"
   },
   "categories": [
     "Programming Languages"
