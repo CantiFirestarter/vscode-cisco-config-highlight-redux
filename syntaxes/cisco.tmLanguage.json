@@ -57,7 +57,7 @@
 			"patterns": [
 				{
 					"name": "keyword.other.config-keyword.vlan.cisco",
-					"match": "(^|\\s)(protocol-vlan|mac-vlan|dot1q-tunnel|dot1Q)(?=\\s|$)"
+					"match": "(^|\\s)(protocol-vlan|mac-vlan|dot1q-tunnel|dot1[Qq])(?=\\s|$)"
 				},
 				{
 					"name": "keyword.other.config-keyword.switchport-mode.access.cisco",
@@ -547,7 +547,7 @@
 					}
 				},
 				"pool": {
-					"match": "(?<=pool\\s)(\\S+)\\b",
+					"match": "(?<=\\bpool\\s)(\\S+)\\b",
 					"name": "entity.name.tag.group.pool.name.cisco"
 				}
 			}
@@ -590,16 +590,37 @@
 				},
 				{
 					"include": "#transform-set"
+				},
+				{
+					"include": "#ipsec-profile"
+				},
+				{
+					"include": "#isakmp-profile"
+				},
+				{
+					"include": "#keyring"
 				}
 			],
 			"repository": {
 				"crypto-map": {
-					"match": "(?<=crypto\\smap\\s)(\\S+)\\b",
+					"match": "(?<=\\bcrypto\\smap\\s)(\\S+)\\b",
 					"name": "entity.name.tag.crypto.crypto-map.name.cisco"
 				},
 				"transform-set": {
-					"match": "(?<=transform-set\\s)(\\S+)\\b",
+					"match": "(?<=\\btransform-set\\s)(\\S+\\s?)+\\b",
 					"name": "entity.name.tag.crypto.transform-set.name.cisco"
+				},
+				"ipsec-profile": {
+					"match": "(?<=\\bipsec\\sprofile\\s)(\\S+)\\b",
+					"name": "entity.name.tag.crypto.ipsec-profile.name.cisco"
+				},
+				"isakmp-profile": {
+					"match": "(?<=\\bisakmp\\sprofile\\s)(\\S+)\\b",
+					"name": "entity.name.tag.crypto.isakmp-profile.name.cisco"
+				},
+				"keyring": {
+					"match": "(?<=\\bkeyring\\s)(\\S+)\\b",
+					"name": "entity.name.tag.crypto.keyring.name.cisco"
 				}
 			}
 		},

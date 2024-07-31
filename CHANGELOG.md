@@ -6,43 +6,73 @@
 ## 0.6.0 (Unreleased)
 ### Added
 - Add syntax highlighting patterns.
+  - entity.name.tag.crypto.ipsec-profile.name
+  - entity.name.tag.crypto.isakmp-profile.name
+  - entity.name.tag.crypto.keyring.name
+  - entity.name.tag.crypto.crypto-map.name
+  - entity.name.tag.crypto.transform-set.name
+  - entity.name.tag.group.pool.name
+
+- Change syntax highlighting patterns. Refer to following section.
+  - keyword.other.config-keyword.add-remove.add
+  - keyword.other.config-keyword.add-remove.except
+  - keyword.other.config-keyword.add-remove.remove
+  - keyword.other.config-keyword.any-all.all
+  - keyword.other.config-keyword.any-all.any
+  - keyword.other.config-keyword.in-out.in
+  - keyword.other.config-keyword.in-out.out
+  - keyword.other.config-keyword.input-output.input
+  - keyword.other.config-keyword.input-output.output
+  - keyword.other.config-keyword.inside-outside.inside
+  - keyword.other.config-keyword.inside-outside.outside
+  - keyword.other.config-keyword.match.all
+  - keyword.other.config-keyword.match.any
+  - keyword.other.config-keyword.permit-deny.deny
+  - keyword.other.config-keyword.permit-deny.permit
+  - keyword.other.config-keyword.status.administratively-down
+  - keyword.other.config-keyword.status.deleted
+  - keyword.other.config-keyword.status.down
+  - keyword.other.config-keyword.status.up
+  - keyword.other.config-keyword.switchport-mode.access
+  - keyword.other.config-keyword.switchport-mode.dynamic
+  - keyword.other.config-keyword.switchport-mode.trunk
 
 ### Changed
-- Changed several syntax highlighting patterns into more specific categories.
+- Refined and subdivided several syntax highlighting patterns into more specific categories.
 
   - Notice
-    - If you have customized Token Colors, this change may cause the Token definitions to no longer match and your customizations may not take effect.
-    - I removed the .csico suffix from the Token Scopes mentioned in the README. This was done to minimize the impact of future similar subdivisions.
+  - If you have customized Token Colors, this change may cause the Token definitions to no longer match and your customizations may not take effect.
+  - Removed the `.csico` suffix from the Token Scopes mentioned in the README. This was done to minimize the impact of future similar subdivisions.
 
   - Token Scopes
-    - keyword.other.config-keyword.add-remove
+    - [before] keyword.other.config-keyword.add-remove
       - keyword.other.config-keyword.add-remove.add
       - keyword.other.config-keyword.add-remove.except
       - keyword.other.config-keyword.add-remove.remove
-    - keyword.other.config-keyword.any-all
+    - [before] keyword.other.config-keyword.any-all
       - keyword.other.config-keyword.any-all.all
       - keyword.other.config-keyword.any-all.any
-    - keyword.other.config-keyword.in-out
+    - [before] keyword.other.config-keyword.in-out
       - keyword.other.config-keyword.in-out.in
       - keyword.other.config-keyword.in-out.out
-    - keyword.other.config-keyword.input-output
+    - [before] keyword.other.config-keyword.input-output
       - keyword.other.config-keyword.input-output.input
       - keyword.other.config-keyword.input-output.output
-    - keyword.other.config-keyword.inside-outside
+    - [before] keyword.other.config-keyword.inside-outside
       - keyword.other.config-keyword.inside-outside.inside
       - keyword.other.config-keyword.inside-outside.outside
-    - keyword.other.config-keyword.match
+    - [before] keyword.other.config-keyword.match
       - keyword.other.config-keyword.match.all
       - keyword.other.config-keyword.match.any
-    - keyword.other.config-keyword.permit-deny
+    - [before] keyword.other.config-keyword.permit-deny
       - keyword.other.config-keyword.permit-deny.deny
       - keyword.other.config-keyword.permit-deny.permit
-    - keyword.other.config-keyword.status
+    - [before] keyword.other.config-keyword.status
       - keyword.other.config-keyword.status.administratively-down
       - keyword.other.config-keyword.status.deleted
       - keyword.other.config-keyword.status.down
       - keyword.other.config-keyword.status.up
-    - keyword.other.config-keyword.switchport-mode
+    - [before] keyword.other.config-keyword.switchport-mode
       - keyword.other.config-keyword.switchport-mode.access
       - keyword.other.config-keyword.switchport-mode.dynamic
       - keyword.other.config-keyword.switchport-mode.trunk

@@ -115,6 +115,9 @@ entity.name.tag.config-string.username
 
 entity.name.tag.crypto.crypto-map.name
 entity.name.tag.crypto.transform-set.name
+entity.name.tag.crypto.ipsec-profile.name
+entity.name.tag.crypto.isakmp-profile.name
+entity.name.tag.crypto.keyring.name
 
 entity.name.tag.group.class-map.name
 entity.name.tag.group.class.name
