@@ -514,6 +514,9 @@
 				},
 				{
 					"include": "#traffic-filter"
+				},
+				{
+					"include": "#community"
 				}
 			],
 			"repository": {
@@ -563,6 +566,10 @@
 				"traffic-filter": {
 					"match": "(?<=traffic-filter\\s)(\\S+)\\b",
 					"name": "entity.name.tag.group.traffic-filter.name.cisco"
+				},
+				"community": {
+					"match": "(?<=community\\s)(\\S+)\\b",
+					"name": "entity.name.tag.group.community.name.cisco"
 				}
 			}
 		},
