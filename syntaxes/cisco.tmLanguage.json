@@ -337,6 +337,9 @@
 		"address": {
 			"patterns": [
 				{
+					"include": "#mac"
+				},
+				{
 					"include": "#cidr"
 				},
 				{
@@ -347,12 +350,26 @@
 				},
 				{
 					"include": "#ipv6-full"
-				},
-				{
-					"include": "#mac"
 				}
 			],
 			"repository": {
+				"mac": {
+					"name": "keyword.other.address.mac.cisco",
+					"match": "\\b([a-fA-F0-9]{2})([:.-])([a-fA-F0-9]{2})([:.-])([a-fA-F0-9]{2})([:.-])([a-fA-F0-9]{2})([:.-])([a-fA-F0-9]{2})([:.-])([a-fA-F0-9]{2})\\b|\\b([a-fA-F0-9]{4})([.])([a-fA-F0-9]{4})([.])([a-fA-F0-9]{4})\\b",
+					"captures": {
+						"1": { "name": "keyword.other.address.mac.cisco" },
+						"2": { "name": "punctuation.separator.cisco" },
+						"3": { "name": "keyword.other.address.mac.cisco" },
+						"4": { "name": "punctuation.separator.cisco" },
+						"5": { "name": "keyword.other.address.mac.cisco" },
+						"6": { "name": "punctuation.separator.cisco" },
+						"7": { "name": "keyword.other.address.mac.cisco" },
+						"8": { "name": "punctuation.separator.cisco" },
+						"9": { "name": "keyword.other.address.mac.cisco" },
+						"10": { "name": "punctuation.separator.cisco" },
+						"11": { "name": "keyword.other.address.mac.cisco" }
+					}
+				},
 				"cidr": {
 					"name": "keyword.other.address.ipv4.cidr.cisco",
 					"match": "\\b(25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]?\\d)\\b",
@@ -383,7 +400,7 @@
 				},
 				"ipv6-condensed": {
 					"name": "keyword.other.address.ipv6.condensed.cisco",
-					"match": "\\b([0-9a-fA-F]{1,4}(::){1}|[0-9A-Fa-f]{1,4}(:){6})\\b",
+					"match": "\\b([0-9a-fA-F]{1,4}(:){0,6}|[0-9A-Fa-f]{1,4}(::){0,1})\\b",
 					"captures": {
 						"1": { "name": "keyword.other.address.ipv6.condensed.cisco" },
 						"2": { "name": "punctuation.separator.cisco" },
@@ -421,23 +438,6 @@
 						"13": { "name": "keyword.other.address.ipv6.full.cisco" },
 						"14": { "name": "punctuation.separator.cisco" },
 						"15": { "name": "keyword.other.address.ipv6.full.cisco" }
-					}
-				},
-				"mac": {
-					"name": "keyword.other.address.mac.cisco",
-					"match": "\\b([a-fA-F0-9]{2})([:.-])([a-fA-F0-9]{2})([:.-])([a-fA-F0-9]{2})([:.-])([a-fA-F0-9]{2})([:.-])([a-fA-F0-9]{2})([:.-])([a-fA-F0-9]{2})\\b|\\b([a-fA-F0-9]{4})([.])([a-fA-F0-9]{4})([.])([a-fA-F0-9]{4})\\b",
-					"captures": {
-						"1": { "name": "keyword.other.address.mac.cisco" },
-						"2": { "name": "punctuation.separator.cisco" },
-						"3": { "name": "keyword.other.address.mac.cisco" },
-						"4": { "name": "punctuation.separator.cisco" },
-						"5": { "name": "keyword.other.address.mac.cisco" },
-						"6": { "name": "punctuation.separator.cisco" },
-						"7": { "name": "keyword.other.address.mac.cisco" },
-						"8": { "name": "punctuation.separator.cisco" },
-						"9": { "name": "keyword.other.address.mac.cisco" },
-						"10": { "name": "punctuation.separator.cisco" },
-						"11": { "name": "keyword.other.address.mac.cisco" }
 					}
 				}
 			}
