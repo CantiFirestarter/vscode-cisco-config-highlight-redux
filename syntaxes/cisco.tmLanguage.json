@@ -1,6 +1,7 @@
-﻿{
+{
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "Cisco Config",
+  "scopeName": "source.cisco",
   "patterns": [
     {
       "include": "#unused_line"
@@ -375,19 +376,8 @@
           }
         },
         "cidr": {
-          "name": "keyword.other.address.ipv4.cidr.cisco",
-          "match": "\\b(25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]?\\d)\\b",
-          "captures": {
-            "1": { "name": "keyword.other.address.ipv4.cidr.cisco" },
-            "2": { "name": "punctuation.separator.cisco" },
-            "3": { "name": "keyword.other.address.ipv4.cidr.cisco" },
-            "4": { "name": "punctuation.separator.cisco" },
-            "5": { "name": "keyword.other.address.ipv4.cidr.cisco" },
-            "6": { "name": "punctuation.separator.cisco" },
-            "7": { "name": "keyword.other.address.ipv4.cidr.cisco" },
-            "8": { "name": "punctuation.separator.cisco" },
-            "9": { "name": "constant.numeric.integer.cisco" }
-          }
+          "name": "keyword.other.address.cidr.cisco",
+          "match": "(?<=/)(?:12[0-8]|1[01]\\d|[1-9]?\\d)\\b"
         },
         "ipv4-full": {
           "name": "keyword.other.address.ipv4.full.cisco",
@@ -789,6 +779,5 @@
         }
       }
     }
-  },
-  "scopeName": "source.cisco"
+  }
 }
