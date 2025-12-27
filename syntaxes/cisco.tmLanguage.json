@@ -3,58 +3,26 @@
   "name": "Cisco Config",
   "scopeName": "source.cisco",
   "patterns": [
-    {
-      "include": "#unused_line"
-    },
-    {
-      "include": "#comment"
-    },
-    {
-      "include": "#interface_type"
-    },
-    {
-      "include": "#interface"
-    },
-    {
-      "include": "#vrf"
-    },
-    {
-      "include": "#string"
-    },
-    {
-      "include": "#group"
-    },
-    {
-      "include": "#acl"
-    },
-    {
-      "include": "#crypto"
-    },
-    {
-      "include": "#address"
-    },
-    {
-      "include": "#numeric"
-    },
-    {
-      "include": "#separator"
-    },
-    {
-      "include": "#command_hostname"
-    },
+    { "include": "#unused_line" },
+    { "include": "#comment" },
+    { "include": "#interface_type" },
+    { "include": "#interface" },
+    { "include": "#vrf" },
+    { "include": "#string" },
+    { "include": "#group" },
+    { "include": "#acl" },
+    { "include": "#crypto" },
+    { "include": "#address" },
+    { "include": "#command_hostname" },
+    { "include": "#numeric" },
+    { "include": "#separator" },
     {
       "comment": "bgp must be placed after address. {neighbor [peer-group-name or ip-address]}",
       "include": "#bgp"
     },
-    {
-      "include": "#keyword"
-    },
-    {
-      "include": "#param1"
-    },
-    {
-      "include": "#param2"
-    }
+    { "include": "#keyword" },
+    { "include": "#param1" },
+    { "include": "#param2" }
   ],
   "repository": {
     "separator": {
@@ -199,54 +167,22 @@
     },
     "interface_type": {
       "patterns": [
-        {
-          "include": "#ethernet"
-        },
-        {
-          "include": "#wireless"
-        },
-        {
-          "include": "#loopback"
-        },
-        {
-          "include": "#port-channel"
-        },
-        {
-          "include": "#tunnel"
-        },
-        {
-          "include": "#vlan"
-        },
-        {
-          "include": "#null"
-        },
-        {
-          "include": "#serial"
-        },
-        {
-          "include": "#cellular"
-        },
-        {
-          "include": "#virtual-template"
-        },
-        {
-          "include": "#dialer"
-        },
-        {
-          "include": "#async"
-        },
-        {
-          "include": "#bri"
-        },
-        {
-          "include": "#bvi"
-        },
-        {
-          "include": "#app"
-        },
-        {
-          "include": "#management"
-        }
+        { "include": "#ethernet" },
+        { "include": "#wireless" },
+        { "include": "#loopback" },
+        { "include": "#port-channel" },
+        { "include": "#tunnel" },
+        { "include": "#vlan" },
+        { "include": "#null" },
+        { "include": "#serial" },
+        { "include": "#cellular" },
+        { "include": "#virtual-template" },
+        { "include": "#dialer" },
+        { "include": "#async" },
+        { "include": "#bri" },
+        { "include": "#bvi" },
+        { "include": "#app" },
+        { "include": "#management" }
       ],
       "repository": {
         "ethernet": {
@@ -316,14 +252,7 @@
       }
     },
     "numeric": {
-      "patterns": [
-        {
-          "include": "#integer"
-        },
-        {
-          "include": "#hex"
-        }
-      ],
+      "patterns": [{ "include": "#integer" }, { "include": "#hex" }],
       "repository": {
         "hex": {
           "name": "constant.numeric.hex.cisco",
@@ -345,27 +274,13 @@
     },
     "address": {
       "patterns": [
-        {
-          "include": "#mac"
-        },
-        {
-          "include": "#cidr"
-        },
-        {
-          "include": "#ipv4-AD"
-        },
-        {
-          "include": "#ipv6-AD"
-        },
-        {
-          "include": "#ipv4-full"
-        },
-        {
-          "include": "#ipv6-full"
-        },
-        {
-          "include": "#ipv6-condensed"
-        }
+        { "include": "#mac" },
+        { "include": "#cidr" },
+        { "include": "#ipv4-AD" },
+        { "include": "#ipv6-AD" },
+        { "include": "#ipv4-full" },
+        { "include": "#ipv6-full" },
+        { "include": "#ipv6-condensed" }
       ],
       "repository": {
         "mac": {
@@ -463,7 +378,7 @@
       "patterns": [
         {
           "name": "punctuation.config-param.first.cisco",
-          "match": "(?<=^\\s*?)\\S+"
+          "match": "(?<=^\\s*)\\S+"
         }
       ]
     },
@@ -471,7 +386,7 @@
       "patterns": [
         {
           "name": "punctuation.config-param.second.cisco",
-          "match": "(?<=^\\s*?\\S+\\s+)\\S+"
+          "match": "(?<=^\\s*\\S+\\s+)\\S+"
         }
       ]
     },
@@ -481,54 +396,26 @@
           "comment": "((?<=vrf\\s)(?!.*forwarding)|(?<=vrf\\sforwarding\\s))\\S+",
           "match": "(?i)(vrf)\\s((forwarding|definition)\\s)?(\\S+)",
           "captures": {
-            "1": {
-              "name": "entity.name.class.vrf.declaration.cisco"
-            },
-            "2": {
-              "name": "entity.other.vrf.forwarding.cisco"
-            },
-            "3": {
-              "name": "entity.other.vrf.definition.cisco"
-            },
-            "4": {
-              "name": "entity.name.tag.vrf.vrf-name.cisco"
-            }
+            "1": { "name": "entity.name.class.vrf.declaration.cisco" },
+            "2": { "name": "entity.other.vrf.forwarding.cisco" },
+            "3": { "name": "entity.other.vrf.definition.cisco" },
+            "4": { "name": "entity.name.tag.vrf.vrf-name.cisco" }
           }
         }
       ]
     },
     "string": {
       "patterns": [
-        {
-          "include": "#hostname"
-        },
-        {
-          "include": "#description"
-        },
-        {
-          "include": "#remark"
-        },
-        {
-          "include": "#domain-name"
-        },
-        {
-          "include": "#username"
-        },
-        {
-          "include": "#name"
-        },
-        {
-          "include": "#logging-system-message"
-        },
-        {
-          "include": "#password"
-        },
-        {
-          "include": "#secret"
-        },
-        {
-          "include": "#banner"
-        }
+        { "include": "#hostname" },
+        { "include": "#description" },
+        { "include": "#remark" },
+        { "include": "#domain-name" },
+        { "include": "#username" },
+        { "include": "#name" },
+        { "include": "#logging-system-message" },
+        { "include": "#password" },
+        { "include": "#secret" },
+        { "include": "#banner" }
       ],
       "repository": {
         "description": {
@@ -576,18 +463,10 @@
     },
     "bgp": {
       "patterns": [
-        {
-          "include": "#neighbor-peer-group"
-        },
-        {
-          "include": "#peer-session"
-        },
-        {
-          "include": "#peer-policy"
-        },
-        {
-          "include": "#peer-group"
-        }
+        { "include": "#neighbor-peer-group" },
+        { "include": "#peer-session" },
+        { "include": "#peer-policy" },
+        { "include": "#peer-group" }
       ],
       "repository": {
         "neighbor-peer-group": {
@@ -610,39 +489,17 @@
     },
     "group": {
       "patterns": [
-        {
-          "include": "#class"
-        },
-        {
-          "include": "#service-policy"
-        },
-        {
-          "include": "#policy-map"
-        },
-        {
-          "include": "#class-map"
-        },
-        {
-          "include": "#route-map"
-        },
-        {
-          "include": "#prefix-list"
-        },
-        {
-          "include": "#object-group"
-        },
-        {
-          "include": "#pool"
-        },
-        {
-          "include": "#policy-list"
-        },
-        {
-          "include": "#traffic-filter"
-        },
-        {
-          "include": "#community"
-        }
+        { "include": "#class" },
+        { "include": "#service-policy" },
+        { "include": "#policy-map" },
+        { "include": "#class-map" },
+        { "include": "#route-map" },
+        { "include": "#prefix-list" },
+        { "include": "#object-group" },
+        { "include": "#pool" },
+        { "include": "#policy-list" },
+        { "include": "#traffic-filter" },
+        { "include": "#community" }
       ],
       "repository": {
         "class": {
@@ -700,12 +557,9 @@
     },
     "acl": {
       "patterns": [
-        {
-          "include": "#access-list"
-        },
-        {
-          "include": "#access-group"
-        }
+        { "include": "#access-class" },
+        { "include": "#access-list" },
+        { "include": "#access-group" }
       ],
       "repository": {
         "access-list": {
@@ -731,21 +585,11 @@
     },
     "crypto": {
       "patterns": [
-        {
-          "include": "#crypto-map"
-        },
-        {
-          "include": "#transform-set"
-        },
-        {
-          "include": "#ipsec-profile"
-        },
-        {
-          "include": "#isakmp-profile"
-        },
-        {
-          "include": "#keyring"
-        }
+        { "include": "#crypto-map" },
+        { "include": "#transform-set" },
+        { "include": "#ipsec-profile" },
+        { "include": "#isakmp-profile" },
+        { "include": "#keyring" }
       ],
       "repository": {
         "crypto-map": {
@@ -771,14 +615,7 @@
       }
     },
     "unused_line": {
-      "patterns": [
-        {
-          "include": "#unused"
-        },
-        {
-          "include": "#default"
-        }
-      ],
+      "patterns": [{ "include": "#unused" }, { "include": "#default" }],
       "repository": {
         "unused": {
           "name": "meta.function-call.command-disable.unused.cisco",
