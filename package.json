@@ -12,15 +12,23 @@
   "engines": {
     "vscode": "^1.63.0"
   },
-  "categories": ["Programming Languages"],
+  "categories": [
+    "Programming Languages"
+  ],
   "icon": "images/icon.png",
   "main": "./out/extension.js",
   "contributes": {
     "languages": [
       {
         "id": "cisco",
-        "aliases": ["Cisco Config", "cisco"],
-        "extensions": [".cisco", ".config"],
+        "aliases": [
+          "Cisco Config",
+          "cisco"
+        ],
+        "extensions": [
+          ".cisco",
+          ".config"
+        ],
         "configuration": "./language-configuration.json"
       }
     ],
@@ -31,10 +39,22 @@
         "path": "./syntaxes/cisco.tmLanguage.json"
       }
     ],
+    "commands": [
+      {
+        "command": "cisco-config-highlight.applyColors",
+        "title": "Cisco Config: Apply Token Colors",
+        "category": "Cisco Config Highlight"
+      }
+    ],
     "configuration": [
       {
         "title": "Cisco Config Highlight",
         "properties": {
+          "cisco-config-highlight.applyAllTokenRules": {
+            "type": "boolean",
+            "default": false,
+            "markdownDescription": "Apply all token scopes from syntaxes/textMateRules.json on activation and configuration changes. User color settings override these defaults by scope."
+          },
           "cisco-config-highlight.outline.showSymbolsInOutlinePanel": {
             "type": "boolean",
             "default": false,

@@ -24,7 +24,7 @@ export async function registerUpdateInfo(
   }
   notificationConditions.forEach(info => {
     if (!previousVersion || semver.satisfies(previousVersion, info.version_info)) {
-      const prev = previousVersion ? previousVersion : 'undefined';
+      const prev = previousVersion ?? 'undefined';
       let message = info.messege.split('${previousVersion}').join(prev);
       message = message.split('${currentVersion}').join(currentVersion);
       outputChannel.appendLine(message);

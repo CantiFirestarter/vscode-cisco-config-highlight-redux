@@ -5,18 +5,23 @@ This script applies TextMate token scope rules from `syntaxes/textMateRules.json
 ## Usage
 
 ### Basic Usage
+
 Apply rules to `.vscode/settings.json`:
+
 ```bash
 npm run apply-token-scopes
 ```
 
 ### Dry Run
+
 Preview changes without writing to file:
+
 ```bash
 npm run apply-token-scopes:dry-run
 ```
 
 ### Custom Paths (JavaScript)
+
 ```bash
 node scripts/applyScopeRules.js \
   --settings-path .vscode/settings.json \
@@ -25,10 +30,13 @@ node scripts/applyScopeRules.js \
 ```
 
 ### TypeScript Version
+
 Run the TypeScript version:
+
 ```bash
 npm run apply-token-scopes:ts
 ```
+
 Note: `ts-node` and Node.js typings are included in devDependencies. Just run `npm install` first.
 
 ## Features
@@ -42,16 +50,17 @@ Note: `ts-node` and Node.js typings are included in devDependencies. Just run `n
 
 ## Command Line Options
 
-| Option | Description |
-|--------|-------------|
-| `--settings-path <path>` | Path to settings.json (default: `.vscode/settings.json`) |
-| `--rules-path <path>` | Path to textMateRules.json (default: `syntaxes/textMateRules.json`) |
-| `--output <path>` | Output file path (default: same as settings-path) |
-| `--dry-run` | Show changes without writing to file |
+| Option                   | Description                                                         |
+| ------------------------ | ------------------------------------------------------------------- |
+| `--settings-path <path>` | Path to settings.json (default: `.vscode/settings.json`)            |
+| `--rules-path <path>`    | Path to textMateRules.json (default: `syntaxes/textMateRules.json`) |
+| `--output <path>`        | Output file path (default: same as settings-path)                   |
+| `--dry-run`              | Show changes without writing to file                                |
 
 ## Examples
 
 ### Apply rules from a custom location
+
 ```bash
 node scripts/applyScopeRules.js \
   --rules-path ./custom-themes/my-rules.json \
@@ -59,11 +68,13 @@ node scripts/applyScopeRules.js \
 ```
 
 ### Output to a different file
+
 ```bash
 npm run apply-token-scopes -- --output .vscode/settings-new.json
 ```
 
 ### Preview changes first
+
 ```bash
 npm run apply-token-scopes:dry-run
 # Review output, then apply:

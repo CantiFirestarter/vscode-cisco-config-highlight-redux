@@ -146,6 +146,12 @@
         }
       },
       {
+        "scope": "entity.name.tag.acl.access-class.name",
+        "settings": {
+          "foreground": "#fff000"
+        }
+      },
+      {
         "scope": "entity.name.tag.acl.access-group.name",
         "settings": {
           "foreground": "#fff000"
@@ -329,12 +335,6 @@
         "scope": "keyword.other.acl.access-list.type",
         "settings": {
           "foreground": "#fff"
-        }
-      },
-      {
-        "scope": "keyword.other.address.ipv4.cidr",
-        "settings": {
-          "foreground": "#2e74b5"
         }
       },
       {

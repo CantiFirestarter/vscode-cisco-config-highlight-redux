@@ -11,34 +11,36 @@ This project is in the development stages.
 There's a possibility that definitions will change in the future.
 
 > [!NOTE]  
-> Changes (v0.5 → v0.6)  
+> Changes (v0.5 → v0.6)
 >
 > The semantic token scopes assigned to certain keyword categories have been subdivided.  
-> If you had defined a custom syntax color, this change introduces potential incompatibilities with tooling or themes that rely on scope definitions from version 0.5 or earlier.  
+> If you had defined a custom syntax color, this change introduces potential incompatibilities with tooling or themes that rely on scope definitions from version 0.5 or earlier.
 >
 > If your implementation depends on specific scope tokens, please refer to the changelog for a detailed list of changes introduced in this version, and update your configuration accordingly.  
 > See [CHANGELOG.md](CHANGELOG.md)
 
-
 ## Features
+
 This extension provides some awesome features for Cisco config text, including:
 
 - Syntax highlighting
 - Config outline (Experimental)
 
-
 ## Installation
+
 The extension for VS Code is available on the Visual Studio Marketplace and the Open VSX Registry:
+
 - [Visual Studio Marketplace - Cisco Config Highlight](https://marketplace.visualstudio.com/items?itemName=Y-Ysss.cisco-config-highlight)
 - [Open VSX Registry - Cisco Config Highlight](https://open-vsx.org/extension/Y-Ysss/cisco-config-highlight)
-
 
 ## Supported Platforms
 
 Syntaxes commonly used in configuration files are supported.
+
 - IOS
 
 The following platforms provide similar syntax highlighting for constructs that overlap with IOS:
+
 - NXOS
 - IOS-XR
 - IOS-XE
@@ -46,8 +48,8 @@ The following platforms provide similar syntax highlighting for constructs that 
 
 I would like to expand support for these platforms in the future.
 
-
 ## Screenshot
+
 Note: Screenshots are using a custom theme ([Y-Ysss/Daybreak Theme](https://marketplace.visualstudio.com/items?itemName=Y-Ysss.vscode-daybreak-theme)).
 <img src="images/Screenshot.png" alt="screenshot">
 
@@ -67,23 +69,26 @@ For more information on how to customize the settings.json file, please refer to
 [Visual Studio Code Documentaion - Color Themes](https://code.visualstudio.com/docs/getstarted/themes)
 
 ### Scope Hierarchy
+
 Tokens follow a hierarchical structure, which allows you to abbreviate scopes when customizing them.
 
 For example, consider the following two scopes:
+
 - `entity.name.class.interface.ethernet`
 - `entity.name.class.interface.loopback`
 
 If you specify these scopes in full, the customization will apply only to those specific tokens.
 
 However, if you use a higher-level scope such as:
+
 - `entity.name.class.interface`
 
 The customization will apply to all tokens under that scope.
 The higher (shallower) the level in the hierarchy, the broader the range of tokens affected.
 
-
 ### VSCode settings.json customize sample
-``` json
+
+```json
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
@@ -108,6 +113,7 @@ The higher (shallower) the level in the hierarchy, the broader the range of toke
 ```
 
 ## Token Scopes List
+
 ```
 comment.block.banner
 comment.line.config
@@ -219,7 +225,6 @@ string.other.secret
 - Show symbols in outline panel
 - Multilingual support (settings page)
 
-
 ### Show symbols in outline panel
 
 <img src="images/outline.png" alt="screenshot">
@@ -231,6 +236,7 @@ Open the settings and enter a keyword in the search box. Select the check box to
 ```
 
 #### Supported symbols
+
 - Command
   - `hostname#{command name}`
   - `hostname>{command name}`
@@ -249,31 +255,39 @@ Open the settings and enter a keyword in the search box. Select the check box to
   - `interface {type, slot, port, etc...}.{number}`
 
 ### Multilingual support
+
 Currently, only the settings page is available.
 
 Following supported languages:
+
 - English
 - Japanese
 
 ## Notes
+
 ### Highlighting in large files
 
 If you want to enable highlighting in large files. Change the following settings to False.
+
 ```
 "editor.largeFileOptimizations": false
 ```
+
 However VSCode disable feature on large files for performance reasons, and forcing VSCode to syntax highlight large files may result in poor editor performance.
 
-
 ## Recommended Extensions
+
 I recommend the following extensions to more beautiful look.
+
 - [Y-Ysss/Daybreak Theme](https://marketplace.visualstudio.com/items?itemName=Y-Ysss.vscode-daybreak-theme)
 - [Jarvis Prestidge/Sublime Material Theme](https://marketplace.visualstudio.com/items?itemName=jprestidge.theme-material-theme)
 
 ## Requests or Issues
+
 If you have any requests or issues, please start an Issue or PullRequest on GitHub.
 
 [GitHub - Y-Ysss/vscode-cisco-config-highlight](https://github.com/Y-Ysss/vscode-cisco-config-highlight)
 
 ## License
+
 MIT License Copyright (c) 2021 Y-Ysss

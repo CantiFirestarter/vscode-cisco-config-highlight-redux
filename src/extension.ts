@@ -12,7 +12,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
     outputChannel.append(String(err));
   }
   registerOutlineSymbolProvider(context);
-  
+
   // Register token color customization (Option 2)
-  // registerTokenColorCustomization(context);
+  registerTokenColorCustomization(context);
 }
