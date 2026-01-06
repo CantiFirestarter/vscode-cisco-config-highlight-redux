@@ -10,6 +10,8 @@ This project is in the development stages.
 
 There's a possibility that definitions will change in the future.
 
+I'm new at this, so there may be some inconsistencies in documtation as I make changes from main fork of this extention.
+
 > [!NOTE]  
 > Changes (v0.6 → v0.7)
 >
@@ -35,10 +37,9 @@ This extension provides some awesome features for Cisco config text, including:
 
 ## Installation
 
-The extension for VS Code is available on the Visual Studio Marketplace and the Open VSX Registry:
+The extension for VS Code is available on the Visual Studio Marketplace:
 
-- [Visual Studio Marketplace - Cisco Config Highlight](https://marketplace.visualstudio.com/items?itemName=Y-Ysss.cisco-config-highlight)
-- [Open VSX Registry - Cisco Config Highlight](https://open-vsx.org/extension/Y-Ysss/cisco-config-highlight)
+- [Visual Studio Marketplace - Cisco Config Highlight: Redus](https://marketplace.visualstudio.com/items?itemName=CantiFirestarter.cisco-config-highlight-redux)
 
 ## Supported Platforms
 
@@ -57,7 +58,7 @@ I would like to expand support for these platforms in the future.
 
 ## Screenshot
 
-Note: Screenshots are using a custom theme ([Y-Ysss/Daybreak Theme](https://marketplace.visualstudio.com/items?itemName=Y-Ysss.vscode-daybreak-theme)).
+Note: Screenshots are using a custom theme ([CantiFirestarter/Daybreak Asuna Theme](https://marketplace.visualstudio.com/items?itemName=CantiFirestarter.vscode-daybreak-asuna-theme)).
 <img src="images/Screenshot.png" alt="screenshot">
 
 ## Token Color Customizations
