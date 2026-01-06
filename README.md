@@ -1,8 +1,8 @@
 <h1 align="center">
-  <a href="https://github.com/CantiFirestarter/vscode-cisco-config-highlight-redus">
+  <a href="https://github.com/CantiFirestarter/vscode-cisco-config-highlight-redux">
     <img src="images/icon.png" alt="theme icon" width="200px">
   </a><br>
-    Cisco Config Highlight
+    Cisco Config Highlight: Redux
 </h1>
 <p align="center">Cisco device configuration Syntax Highlighting for Visual Studio Code.</p>
 
@@ -19,7 +19,7 @@ I'm new at this, so there may be some inconsistencies in documtation as I make c
 >
 > **Major Updates:**
 >
-> - Modern tooling: ESLint v9, TypeScript v5.9, VS Code API v1.63+
+> - Modern tooling: ESLint v9, TypeScript v5.9, VS Code API v1.107.0+
 > - Enhanced syntax patterns with case-insensitive matching
 > - New semantic token color customization framework
 > - Improved interface type and address pattern recognition
@@ -39,7 +39,7 @@ This extension provides some awesome features for Cisco config text, including:
 
 The extension for VS Code is available on the Visual Studio Marketplace:
 
-- [Visual Studio Marketplace - Cisco Config Highlight: Redus](https://marketplace.visualstudio.com/items?itemName=CantiFirestarter.cisco-config-highlight-redux)
+- [Visual Studio Marketplace - Cisco Config Highlight: Redux](https://marketplace.visualstudio.com/items?itemName=CantiFirestarter.cisco-config-highlight-redux)
 
 ## Supported Platforms
 
@@ -240,7 +240,7 @@ string.other.secret
 Open the settings and enter a keyword in the search box. Select the check box to enable.
 
 ```
-@ext:Y-Ysss.cisco-config-highlight showSymbolsInOutlinePanel
+@ext:cantifirestarter.cisco-config-highlight-redux showSymbolsInOutlinePanel
 ```
 
 #### Supported symbols
@@ -289,13 +289,14 @@ I recommend the following extensions to more beautiful look.
 
 - [Y-Ysss/Daybreak Theme](https://marketplace.visualstudio.com/items?itemName=Y-Ysss.vscode-daybreak-theme)
 - [Jarvis Prestidge/Sublime Material Theme](https://marketplace.visualstudio.com/items?itemName=jprestidge.theme-material-theme)
+- [CantiFirestarter/Daybreak Asuna Theme](https://marketplace.visualstudio.com/items?itemName=CantiFirestarter.vscode-daybreak-asuna-theme)
 
 ## Requests or Issues
 
 If you have any requests or issues, please start an Issue or PullRequest on GitHub.
 
-[GitHub - Y-Ysss/vscode-cisco-config-highlight](https://github.com/Y-Ysss/vscode-cisco-config-highlight)
+[GitHub - CantiFirestarter/vscode-cisco-config-highlight-redux](https://github.com/CantiFirestarter/vscode-cisco-config-highlight-redux)
 
 ## License
 
-MIT License Copyright (c) 2021 Y-Ysss
+MIT License Copyright (c) 2026 CantiFirestarter

@@ -36,11 +36,12 @@
 ### Changed
 
 - Modern tooling updates
-  - Updated `@types/vscode` from ^1.52.0 → ^1.63.0
+  - Updated `@types/vscode` from ^1.52.0 → ^1.107.0
   - Updated `eslint` from ^8.57.0 → ^9.0.0
   - Updated `typescript` from ^5.4.3 → ^5.9.3
-  - Updated `typescript-eslint` from ^7.4.0 → ^8.0.0
-  - Added `@types/node` ^20.11.30 and `ts-node` ^10.9.2
+  - Updated `typescript-eslint` from ^7.4.0 → ^8.52.0
+  - Added `@types/node` ^25.0.3 and `ts-node` ^10.9.2
+  - Raised VS Code engine requirement in `engines.vscode` to ^1.107.0 to align with types and README
 
 - Code formatting and quality improvements
   - Standardized indentation across all JSON files (tabs → 2 spaces)

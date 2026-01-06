@@ -10,7 +10,7 @@
     "url": "https://github.com/CantiFirestarter/vscode-cisco-config-highlight-redux.git"
   },
   "engines": {
-    "vscode": "^1.75.0"
+    "vscode": "^1.107.0"
   },
   "categories": [
     "Programming Languages"
@@ -632,17 +632,17 @@
     "semver": "^7.5.2"
   },
   "devDependencies": {
-    "@types/node": "^20.11.30",
-    "@types/semver": "^7.5.2",
-    "@types/vscode": "^1.63.0",
+    "@types/node": "^25.0.3",
+    "@types/semver": "^7.7.1",
+    "@types/vscode": "^1.107.0",
     "esbuild": "^0.27.2",
-    "eslint": "^9.0.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "prettier": "^3.2.5",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.7.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.0.0"
+    "typescript-eslint": "^8.52.0"
   },
   "__metadata": {
     "installedTimestamp": 1765500322524,
