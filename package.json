@@ -1,16 +1,16 @@
 {
-  "name": "cisco-config-highlight",
-  "displayName": "Cisco Config Highlight",
+  "name": "cisco-config-highlight-redux",
+  "displayName": "Cisco Config Highlight: Redux",
   "description": "Cisco device configuration Syntax Highlighting for Visual Studio Code.",
-  "version": "0.6.1",
-  "publisher": "Y-Ysss",
+  "version": "0.7.0",
+  "publisher": "CantiFirestarter",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Y-Ysss/vscode-cisco-config-highlight.git"
+    "url": "https://github.com/CantiFirestarter/vscode-cisco-config-highlight-redux.git"
   },
   "engines": {
-    "vscode": "^1.63.0"
+    "vscode": "^1.75.0"
   },
   "categories": [
     "Programming Languages"
@@ -628,17 +628,19 @@
     "apply-token-scopes:dry-run": "node scripts/applyScopeRules.js --dry-run"
   },
   "dependencies": {
+    "@vscode/vsce": "^3.7.1",
     "semver": "^7.5.2"
   },
   "devDependencies": {
-    "@types/semver": "^7.5.2",
     "@types/node": "^20.11.30",
+    "@types/semver": "^7.5.2",
     "@types/vscode": "^1.63.0",
+    "esbuild": "^0.27.2",
     "eslint": "^9.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
-    "ts-node": "^10.9.2",
     "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.0.0"
   },

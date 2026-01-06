@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://github.com/Y-Ysss/vscode-cisco-config-highlight">
+  <a href="https://github.com/CantiFirestarter/vscode-cisco-config-highlight-redus">
     <img src="images/icon.png" alt="theme icon" width="200px">
   </a><br>
     Cisco Config Highlight
@@ -11,13 +11,20 @@ This project is in the development stages.
 There's a possibility that definitions will change in the future.
 
 > [!NOTE]  
-> Changes (v0.5 → v0.6)
+> Changes (v0.6 → v0.7)
 >
-> The semantic token scopes assigned to certain keyword categories have been subdivided.  
-> If you had defined a custom syntax color, this change introduces potential incompatibilities with tooling or themes that rely on scope definitions from version 0.5 or earlier.
+> Version 0.7 includes significant improvements to syntax highlighting, enhanced keyword recognition with case-insensitive matching, and a new token color customization system.
 >
-> If your implementation depends on specific scope tokens, please refer to the changelog for a detailed list of changes introduced in this version, and update your configuration accordingly.  
-> See [CHANGELOG.md](CHANGELOG.md)
+> **Major Updates:**
+>
+> - Modern tooling: ESLint v9, TypeScript v5.9, VS Code API v1.63+
+> - Enhanced syntax patterns with case-insensitive matching
+> - New semantic token color customization framework
+> - Improved interface type and address pattern recognition
+> - Comprehensive default color theme configuration
+> - Better code organization and maintainability
+>
+> For detailed changes, please refer to [CHANGELOG.md](CHANGELOG.md)
 
 ## Features
 

@@ -16,7 +16,7 @@ export const default_action = async (
   try {
     await vscode.commands.executeCommand(
       'extension.open',
-      'Y-Ysss.cisco-config-highlight',
+      'CantiFirestarter.cisco-config-highlight-redux',
     );
   } catch (err) {
     outputChannel.appendLine(String(err));
