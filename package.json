@@ -511,6 +511,11 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.crypto.keyring.name.description%"
               },
+              "arp-insp-val": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.arp-insp-val.description%"
+              },
               "command_hostname.user-mode": {
                 "type": "string",
                 "format": "color",

@@ -13,6 +13,7 @@
     { "include": "#acl" },
     { "include": "#crypto" },
     { "include": "#address" },
+    { "include": "#arp_insp_val" },
     { "include": "#command_hostname" },
     { "include": "#numeric" },
     { "include": "#separator" },
@@ -149,7 +150,7 @@
         },
         {
           "name": "keyword.other.config-keyword.group3.cisco",
-          "match": "(?i)(^|\\s)(timeout|inactive|exec-timeout|session-timeout|outside|out|exceed-action|drop|expired|failure|stop-record|boot-end-marker|error|reset|end|unassigned|unset|shutdown|system-shutdown|exit|none|limit|down|removal|removed|on-failure|cause|gbic-invalid|off|clear|standby|violation|misconfig|exit-address-family|exception|crashinfo|zeroize|erase|ignore|max-fail|theft|delete)(?=\\b|$)"
+          "match": "(?i)(^|\\s)(timeout|inactive|exec-timeout|session-timeout|outside|out|exceed-action|drop|expired|failure|stop-record|boot-end-marker|error|reset|end|unassigned|unset|shutdown|system-shutdown|exit|none|limit|down|removal|removed|on-failure|cause|gbic-invalid|off|clear|standby|validate|violation|misconfig|exit-address-family|exception|crashinfo|zeroize|erase|ignore|max-fail|theft|delete)(?=\\b|$)"
         },
         {
           "name": "keyword.other.config-keyword.group4.cisco",
@@ -366,6 +367,25 @@
           }
         }
       }
+    },
+    "arp_insp_val": {
+      "begin": "(?i)(?<=ip arp inspection validate\\s)",
+      "end": "$",
+      "name": "meta.function-call.arp-insp-val.cisco",
+      "patterns": [
+        {
+          "match": "(?i)\\bsrc-?mac\\b",
+          "name": "variable.parameter.arp-insp-val.src-mac.cisco"
+        },
+        {
+          "match": "(?i)\\bdst-?mac\\b",
+          "name": "variable.parameter.arp-insp-val.dst-mac.cisco"
+        },
+        {
+          "match": "(?i)\\bip\\b",
+          "name": "variable.parameter.arp-insp-val.ip.cisco"
+        }
+      ]
     },
     "command_hostname": {
       "patterns": [

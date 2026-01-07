@@ -198,6 +198,11 @@ const scopeMappings: ScopeMapping[] = [
   },
   { configKey: 'address.cidr', scope: 'keyword.other.address.cidr' },
   { configKey: 'address.mac', scope: 'keyword.other.address.mac' },
+  // ARP inspection validate values
+  {
+    configKey: 'arp-insp-val',
+    scope: 'meta.function-call.arp-insp-val',
+  },
   // Command hostname
   {
     configKey: 'command_hostname.user-mode',

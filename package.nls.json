@@ -132,6 +132,9 @@
   "configuration.properties.colors.crypto.isakmp-profile.name.description": "entity.name.tag.crypto.isakmp-profile.name",
   "configuration.properties.colors.crypto.keyring.name.description": "entity.name.tag.crypto.keyring.name",
 
+  "_comment_colors_arp": "Token Colors - ARP",
+  "configuration.properties.colors.arp-insp-val.description": "meta.function-call.arp-insp-val",
+
   "_comment_colors_command": "Token Colors - Command Hostname",
   "configuration.properties.colors.command_hostname.user-mode.description": "meta.function-call.command_hostname.user-mode",
   "configuration.properties.colors.command_hostname.privileged-mode.description": "meta.function-call.command_hostname.privileged-mode",
