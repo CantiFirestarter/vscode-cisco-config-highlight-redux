@@ -6,9 +6,9 @@
 </h1>
 <p align="center">Cisco device configuration Syntax Highlighting for Visual Studio Code.</p>
 
-This project is in the development stages.
+This is a Fork of ([Y-Ysss/vscode-cisco-config-highlight](tps://github.com/Y-Ysss/vscode-cisco-config-highlight). No credit is taken from the original work. Implemented changes from the main repository of this extension are intended to improve on it and the only part credit is taken.
 
-There's a possibility that definitions will change in the future.
+## Introduction
 
 I'm new at this, so there may be some inconsistencies in documentation as I make changes from main fork of this extension.
 
