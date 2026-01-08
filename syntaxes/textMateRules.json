@@ -274,7 +274,7 @@
       {
         "scope": "entity.name.tag.group.pool.name",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#39FF14"
         }
       },
       {
