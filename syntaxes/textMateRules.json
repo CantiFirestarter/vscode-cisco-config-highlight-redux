@@ -190,7 +190,7 @@
       {
         "scope": "entity.name.tag.config-string.domain-name",
         "settings": {
-          "foreground": "#87CEEB"
+          "foreground": "#FFD700"
         }
       },
       {
