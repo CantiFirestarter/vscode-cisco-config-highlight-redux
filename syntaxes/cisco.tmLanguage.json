@@ -599,22 +599,21 @@
           }
         },
         "access-class": {
-          "match": "(?i)(?<=access-class\\s)((in|out)\\s)?(\\S+)\\b",
+          "match": "(?i)(?<=access-class\\s)(\\S+)(?:\\s+(in|out))?\\b",
           "captures": {
+            "1": {
+              "name": "entity.name.acl.access-class.name.cisco"
+            },
             "2": {
               "name": "keyword.other.acl.access-class.type.cisco"
-            },
-            "3": {
-              "name": "entity.name.acl.access-class.name.cisco"
             }
           }
         },
         "access-group": {
-          "match": "(?i)(?<=access-group\\s)((name)\\s)?(\\S+)\\b",
+          "match": "(?i)(?<=(?:ip\\s)?access-group\\s)(\\S+)(?:\\s+(in|out))?\\b",
           "captures": {
-            "3": {
-              "name": "entity.name.tag.acl.access-group.name.cisco"
-            }
+            "1": { "name": "entity.name.tag.acl.access-group.name.cisco" },
+            "2": { "name": "keyword.other.acl.access-group.type.cisco" }
           }
         }
       }
