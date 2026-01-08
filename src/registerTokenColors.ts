@@ -290,7 +290,7 @@ const scopeMappings: ScopeMapping[] = [
   { configKey: 'group.acl.name', scope: 'entity.name.tag.group.acl.name' },
   {
     configKey: 'group.object-group.type',
-    scope: 'keyword.other.group.object-group.type.cisco',
+    scope: 'keyword.other.group.object-group.type',
   },
   {
     configKey: 'group.object-group.name',
