@@ -338,6 +338,12 @@
         }
       },
       {
+        "scope": "keyword.other.acl.access-class.type",
+        "settings": {
+          "foreground": "#fff"
+        }
+      },
+      {
         "scope": "keyword.other.address.cidr",
         "settings": {
           "foreground": "#2e74b5"

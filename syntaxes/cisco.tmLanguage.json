@@ -150,7 +150,7 @@
         },
         {
           "name": "keyword.other.config-keyword.group3.cisco",
-          "match": "(?i)(^|\\s)(timeout|inactive|exec-timeout|session-timeout|outside|out|exceed-action|drop|expired|failure|stop-record|boot-end-marker|error|reset|end|unassigned|unset|shutdown|system-shutdown|exit|none|limit|down|removal|removed|on-failure|cause|gbic-invalid|off|clear|standby|validate|violation|misconfig|exit-address-family|exception|crashinfo|zeroize|erase|ignore|max-fail|theft|delete)(?=\\b|$)"
+          "match": "(?i)(^|\\s)(boot-end-marker|cause|clear|crashinfo|delete|down|drop|end|error|erase|exception|exceed-action|exec-timeout|exit|exit-address-family|expired|failure|gbic-invalid|ignore|inactive|inactivity|limit|max-fail|misconfig|none|off|on-failure|out|outside|removal|removed|reset|restrict|session-timeout|shutdown|standby|stop-record|system-shutdown|theft|timeout|unassigned|unset|validate|violation|zeroize)(?=\\b|$)"
         },
         {
           "name": "keyword.other.config-keyword.group4.cisco",
@@ -595,6 +595,17 @@
             },
             "3": {
               "name": "entity.name.tag.acl.access-list.name.cisco"
+            }
+          }
+        },
+        "access-class": {
+          "match": "(?i)(?<=access-class\\s)((in|out)\\s)?(\\S+)\\b",
+          "captures": {
+            "2": {
+              "name": "entity.name.acl.access-class.name.cisco"
+            },
+            "3": {
+              "name": "keyword.other.acl.access-class.type.cisco"
             }
           }
         },
