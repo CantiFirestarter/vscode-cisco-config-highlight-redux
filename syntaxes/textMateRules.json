@@ -190,7 +190,7 @@
       {
         "scope": "entity.name.tag.config-string.domain-name",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#87CEEB"
         }
       },
       {
@@ -208,7 +208,7 @@
       {
         "scope": "entity.name.tag.config-string.username",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#FF003C"
         }
       },
       {
@@ -430,13 +430,13 @@
       {
         "scope": "keyword.other.config-keyword.input-output.input",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#6A5ACD"
         }
       },
       {
         "scope": "keyword.other.config-keyword.input-output.output",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#CD5C5C"
         }
       },
       {
@@ -628,7 +628,7 @@
       {
         "scope": "string.other.password",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#00FF7F"
         }
       },
       {
@@ -640,7 +640,7 @@
       {
         "scope": "string.other.secret",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#00FF7F"
         }
       }
     ]

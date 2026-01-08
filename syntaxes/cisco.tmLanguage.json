@@ -154,7 +154,7 @@
         },
         {
           "name": "keyword.other.config-keyword.group4.cisco",
-          "match": "(?i)(^|\\s)(addon|activate|active|aging|allow|allowed|authenticate|authentication-key|auto-copy|auto-upgrade|binding|boot-start-marker|both|clean|commit|conform-action|complete|detail|desirable|enable|enabled|established|full|generate|gt|in|insertion|maximum|optimize|on|on-success|permit|receive|relay|reload|ro|rw|set|show|send-community|success|trust|transmit|trusted-key|update-source|verify|yes)(?=\\b|$)"
+          "match": "(?i)(^|\\s)(addon|activate|active|aging|allow|allowed|authenticate|authentication-key|auto-copy|auto-upgrade|binding|boot-start-marker|both|clean|commit|conform-action|complete|detail|desirable|enable|enabled|established|full|generate|gt|in|insertion|maximum|optimize|on|on-success|permit|privilege|receive|relay|reload|ro|rw|set|show|send-community|success|trust|transmit|trusted-key|update-source|verify|yes)(?=\\b|$)"
         },
         {
           "name": "keyword.other.config-keyword.group5.cisco",
@@ -472,11 +472,11 @@
           "name": "entity.name.tag.config-string.logging-system-message.cisco"
         },
         "password": {
-          "match": "(?i)(?<=password\\s\\d+\\s)(\\S+)$",
+          "match": "(?i)(?<=password\\s)(?:\\d+\\s)?(\\S+)$",
           "name": "string.other.password.cisco"
         },
         "secret": {
-          "match": "(?i)(?<=secret\\s\\d+\\s)(\\S+)$",
+          "match": "(?i)(?<=secret\\s)(?:\\d+\\s)?(\\S+)$",
           "name": "string.other.secret.cisco"
         },
         "banner": {
