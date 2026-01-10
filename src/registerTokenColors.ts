@@ -129,12 +129,56 @@ const scopeMappings: ScopeMapping[] = [
     scope: 'keyword.other.config-keyword.shutdown',
   },
   { configKey: 'keyword.remark', scope: 'keyword.other.config-keyword.remark' },
-  { configKey: 'keyword.group1', scope: 'keyword.other.config-keyword.group1' },
-  { configKey: 'keyword.group2', scope: 'keyword.other.config-keyword.group2' },
-  { configKey: 'keyword.group3', scope: 'keyword.other.config-keyword.group3' },
-  { configKey: 'keyword.group4', scope: 'keyword.other.config-keyword.group4' },
-  { configKey: 'keyword.group5', scope: 'keyword.other.config-keyword.group5' },
-  { configKey: 'keyword.group6', scope: 'keyword.other.config-keyword.group6' },
+  // Network protocols
+  {
+    configKey: 'keyword.network-protocols.security-aaa',
+    scope: 'keyword.other.config-keyword.network-protocols.security-aaa',
+  },
+  {
+    configKey: 'keyword.network-protocols.wireless',
+    scope: 'keyword.other.config-keyword.network-protocols.wireless',
+  },
+  {
+    configKey: 'keyword.network-protocols.ip-routing',
+    scope: 'keyword.other.config-keyword.network-protocols.ip-routing',
+  },
+  {
+    configKey: 'keyword.network-protocols.system-logging',
+    scope: 'keyword.other.config-keyword.network-protocols.system-logging',
+  },
+  {
+    configKey: 'keyword.network-protocols.layer2',
+    scope: 'keyword.other.config-keyword.network-protocols.layer2',
+  },
+  {
+    configKey: 'keyword.network-protocols.mgmt-interfaces',
+    scope: 'keyword.other.config-keyword.network-protocols.mgmt-interfaces',
+  },
+  // Config commands
+  {
+    configKey: 'keyword.config-commands',
+    scope: 'keyword.other.config-keyword.config-commands',
+  },
+  // Operational states
+  {
+    configKey: 'keyword.operational-states',
+    scope: 'keyword.other.config-keyword.operational-states',
+  },
+  // Control actions
+  {
+    configKey: 'keyword.control-actions',
+    scope: 'keyword.other.config-keyword.control-actions',
+  },
+  // Advanced options
+  {
+    configKey: 'keyword.advanced-options',
+    scope: 'keyword.other.config-keyword.advanced-options',
+  },
+  // Routing protocols
+  {
+    configKey: 'keyword.routing-protocols',
+    scope: 'keyword.other.config-keyword.routing-protocols',
+  },
   // Interfaces
   {
     configKey: 'interface.ethernet',
@@ -202,6 +246,18 @@ const scopeMappings: ScopeMapping[] = [
   {
     configKey: 'arp-insp-val',
     scope: 'meta.function-call.arp-insp-val',
+  },
+  {
+    configKey: 'arp-insp-val.src-mac',
+    scope: 'constant.other.arp-insp-val.src-mac',
+  },
+  {
+    configKey: 'arp-insp-val.dst-mac',
+    scope: 'constant.other.arp-insp-val.dst-mac',
+  },
+  {
+    configKey: 'arp-insp-val.ip',
+    scope: 'constant.other.arp-insp-val.ip',
   },
   // Command hostname
   {
@@ -309,6 +365,29 @@ const scopeMappings: ScopeMapping[] = [
     configKey: 'group.community.name',
     scope: 'entity.name.tag.group.community.name',
   },
+  // QoS group
+  {
+    configKey: 'group.qos.class.name',
+    scope: 'entity.name.tag.group.qos.class.name',
+  },
+  {
+    configKey: 'group.qos.service-policy.name',
+    scope: 'entity.name.tag.group.qos.service-policy.name',
+  },
+  {
+    configKey: 'group.qos.policy-map.name',
+    scope: 'entity.name.tag.group.qos.policy-map.name',
+  },
+  // Routing group
+  {
+    configKey: 'group.routing.route-map.name',
+    scope: 'entity.name.tag.group.routing.route-map.name',
+  },
+  // Resource group
+  {
+    configKey: 'group.resource.pool.name',
+    scope: 'entity.name.tag.group.resource.pool.name',
+  },
   // ACL
   {
     configKey: 'acl.access-list.name',
@@ -333,6 +412,26 @@ const scopeMappings: ScopeMapping[] = [
   {
     configKey: 'acl.access-group.type',
     scope: 'keyword.other.acl.access-group.type',
+  },
+  {
+    configKey: 'acl.protocol',
+    scope: 'keyword.other.acl.protocol',
+  },
+  {
+    configKey: 'acl.tcp-flag',
+    scope: 'keyword.other.acl.tcp-flag',
+  },
+  {
+    configKey: 'acl.icmp-type',
+    scope: 'keyword.other.acl.icmp-type',
+  },
+  {
+    configKey: 'acl.option',
+    scope: 'keyword.other.acl.option',
+  },
+  {
+    configKey: 'acl.port-operator',
+    scope: 'keyword.other.acl.port-operator',
   },
   // Crypto
   {

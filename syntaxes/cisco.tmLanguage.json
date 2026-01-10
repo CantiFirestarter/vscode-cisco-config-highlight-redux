@@ -6,7 +6,6 @@
     { "include": "#unused_line" },
     { "include": "#comment" },
     { "include": "#interface_type" },
-    { "include": "#interface" },
     { "include": "#vrf" },
     { "include": "#string" },
     { "include": "#group" },
@@ -21,9 +20,7 @@
       "comment": "bgp must be placed after address. {neighbor [peer-group-name or ip-address]}",
       "include": "#bgp"
     },
-    { "include": "#keyword" },
-    { "include": "#param1" },
-    { "include": "#param2" }
+    { "include": "#keyword" }
   ],
   "repository": {
     "separator": {
@@ -140,31 +137,94 @@
           "name": "keyword.other.config-keyword.remark.cisco",
           "match": "(?i)(^|\\s)(remark)(?=\\b|$)"
         },
-        {
-          "name": "keyword.other.config-keyword.group1.cisco",
-          "match": "(?i)(^|\\s)(aaa_server|access-log|acct-port|accounting|action|address|admission|advertise-v2|age|aes-ccm|allocation|ap|attach-policy|ascending|auth|auth-port|auth-proxy|authenticate-fail|authentication-server|authentication|authorization|arp|auto|auto-sync|aux|basic-summary-address|begin|block-unknown-source|bootpc|bootps|bootup|bpdufilter|bpduguard|broadcast|brief|bus|cache|capability-change|cck|ciphers|change|chain|chassis-id|cdp|certificate|cef|client|client-id|classless|coldstart|compress-config|config|config-copy|connection|contact|conflict|console|cor|counters|country|crypto|cs4|dead-criteria|datetime|debug|deauthenticate|destination|device|dhcp|dial-peer|disassociate|dot1Q|dot11-qos|dot11d|eap|edge|entries|enrollment|entity|exec-time|exec|extended|extendable|excluded-address|exclude|eq|file|finrst-timeout|flow-aggregation|flow-export|flow|flowcontrol|forward-protocol|fallback|flash|general-prefix|guest-mode|Guest|group|h-node|help-path|helper-address|host|icmp|include|included|indoor|ingress|infrastructure|inside|ipsec|irb|iso|key-management|key|level|linkdown|linkup|list|local|localtime|logging|login|log|location|mac-address|main-cpu|max|membership-termination|mgmt|msec|missing|min-length|minimal|mode|modulus|neighbor|next-hop|native|new-model|newinfo|nde-address|netbios-dgm|netbios-ns|netflow|network|nonegotiate|nat-transparency|nat|ofdm|optional|open|page|pad|password-encryption|passwords|password|pki|pool|port-security|primary|prefer|priority|preempt|prefix|proxy|proxy-arp|pvst|qos|ra|radius|range|rapid-pvst|ratelimit|recurring|redirects|recovery|redundancy|resource|router-id|routing|route|route-cache|running-config|rp|root|rogue-ap|run|secure-server|send|self-signed|selfsigned|service-type|session-id|secondary|section|secret|snmptrap|sso|start-stop|static|station-role|spanning-disabled|subscriber-loop-control|subnet-zero|subject-name|summary-address|summary|switch-over|syslog|tacacs+|tcp-timeout|time|timezone|traps|trunk|traffic-filter|translation|translations|transport|tries|threshold|tty|tkip|tracking|type|udp-encaps|udp-port|udp|unicast-flooding|unicast-routing|unreachables|update-calendar|update|usage|uptime|v3|vsa|vty|view|version|voice|wds|wep|wep128|wlan-wep|window-size|warmstart|wnm|write|wpa|Z)(?=\\b|$)"
+        { "include": "#keyword-groups" }
+      ],
+      "repository": {
+        "keyword-groups": {
+          "patterns": [
+            { "include": "#network-protocols" },
+            { "include": "#config-commands" },
+            { "include": "#operational-states" },
+            { "include": "#control-actions" },
+            { "include": "#advanced-options" },
+            { "include": "#routing-protocols" }
+          ]
         },
-        {
-          "name": "keyword.other.config-keyword.group2.cisco",
-          "match": "(?i)(^|\\s)(access-class|access-list|algorithm|algorithm-type|autostate|banner|boot|bpdu|broadcast-key|bridge-group|bridge|channel-group|channel-protocol|channel|class|class-map|client-identifier|configure|copy|default-router|description|device-tracking|diagnostic|dir|dns-server|domain-lookup|domain-name|domain|dot11|dot1x|duplex|encryption|encapsulation|errdisable|group2aaa|hostname|input|int|install|interface|IP-Address|ip|lease|line|lldp|license|mbssid|method|mls|mpls|name|nd|netbios-name-server|netbios-node-type|neighbors|ntp|ok\\?|police|policy-map|power|process|reauth-period|redistribute|request|route-map|router|rsa|rts|security|service-policy|service|sntp|software|spanning-tree|speed|startup-config|storm-control|stackwise-virtual|sync|switch|switchport|tacacs-server|udld|vtp|wlccp|wr|world-mode|username|vrf)(?=\\b|$)"
+        "network-protocols": {
+          "patterns": [
+            {
+              "comment": "Security & Identity (AAA) - Authentication, Authorization, Crypto, Certificates, Keys",
+              "name": "keyword.other.config-keyword.network-protocols.security-aaa.cisco",
+              "match": "(?i)(^|\\s)(aaa_server|acct-port|aes-ccm|auth|auth-port|auth-proxy|authenticate-fail|authentication-server|authentication|authorization|block-unknown-source|certificate|ciphers|crypto|deauthenticate|enrollment|group2aaa|ipsec|key-management|key|login|password|passwords|password-encryption|pki|port-security|radius|secret|secure-server|self-signed|selfsigned|subscriber-loop-control|tacacs+)(?=\\b|$)"
+            },
+            {
+              "comment": "Wireless Networking (Dot11 & SSID) - 802.11, Access Points, Wireless Security",
+              "name": "keyword.other.config-keyword.network-protocols.wireless.cisco",
+              "match": "(?i)(^|\\s)(ap|cck|disassociate|dot11-qos|dot11d|eap|guest-mode|Guest|indoor|ofdm|rogue-ap|station-role|tkip|wds|wep|wep128|wlan-wep|wnm|wpa)(?=\\b|$)"
+            },
+            {
+              "comment": "IP Services & Routing - DHCP, DNS, Routing, NAT, QoS, Network Services",
+              "name": "keyword.other.config-keyword.network-protocols.ip-routing.cisco",
+              "match": "(?i)(^|\\s)(action|address|admission|advertise-v2|attach-policy|basic-summary-address|bootpc|bootps|cef|classless|cs4|default-router|destination|dhcp|dns-server|domain-name|eq|excluded-address|forward-protocol|general-prefix|h-node|helper-address|host|icmp|inside|irb|iso|lease|nat|nat-transparency|netbios-dgm|netbios-ns|netbios-name-server|netbios-node-type|network|next-hop|pool|prefix|priority|proxy-arp|qos|ra|ratelimit|redirects|route|route-cache|router-id|routing|rp|static|subnet-zero|summary-address|summary|traffic-filter|tracking|translation|translations|type|udp|udp-encaps|udp-port|unicast-routing|unreachables)(?=\\b|$)"
+            },
+            {
+              "comment": "System Management & Logging - Syslog, SNMP, NetFlow, Config, Timers, Resources",
+              "name": "keyword.other.config-keyword.network-protocols.system-logging.cisco",
+              "match": "(?i)(^|\\s)(access-log|age|allocation|ascending|auto|auto-sync|begin|bootup|brief|cache|change|coldstart|compress-config|config|config-copy|contact|cor|counters|country|datetime|dead-criteria|debug|device|dial-peer|entities|entity|entries|exclude|extended|extendable|fallback|file|finrst-timeout|flash|flow|flow-aggregation|flow-export|group|include|included|level|linkdown|linkup|list|local|localtime|location|logging|log|main-cpu|max|mgmt|min-length|minimal|missing|mode|modulus|native|nde-address|netflow|new-model|newinfo|object|object-group|open|optional|pad|page|prefer|preempt|primary|range|recovery|recurring|redundancy|resource|run|running-config|secondary|section|send|sequence|service-type|session-id|snmptrap|sso|start-stop|subject-name|switch-over|syslog|tcp-timeout|threshold|time|timeout|timezone|traps|transport|tries|update|update-calendar|uptime|usage|v3|version|view|voice|vsa|warmstart|wildcard|window-size|write|Z)(?=\\b|$)"
+            },
+            {
+              "comment": "Layer 2 Switching & Connectivity - Spanning Tree, CDP, Trunking, VLANs, MAC",
+              "name": "keyword.other.config-keyword.network-protocols.layer2.cisco",
+              "match": "(?i)(^|\\s)(bpdufilter|bpduguard|broadcast|capability-change|cdp|chain|chassis-id|dot1Q|edge|flowcontrol|ingress|infrastructure|mac-address|membership-termination|neighbor|pvst|rapid-pvst|root|spanning-disabled|trunk|unicast-flooding)(?=\\b|$)"
+            },
+            {
+              "comment": "Management Interfaces (VTY/Console) - Line Access, Sessions, Execution",
+              "name": "keyword.other.config-keyword.network-protocols.mgmt-interfaces.cisco",
+              "match": "(?i)(^|\\s)(aux|bus|client|client-id|conflict|console|exec|exec-time|msec|tty|vty)(?=\\b|$)"
+            }
+          ]
         },
-        {
-          "name": "keyword.other.config-keyword.group3.cisco",
-          "match": "(?i)(^|\\s)(boot-end-marker|cause|clear|crashinfo|delete|down|drop|end|error|erase|exception|exceed-action|exec-timeout|exit|exit-address-family|expired|failure|gbic-invalid|ignore|inactive|inactivity|limit|max-fail|misconfig|none|off|on-failure|out|outside|removal|removed|reset|restrict|session-timeout|shutdown|standby|stop-record|system-shutdown|theft|timeout|unassigned|unset|validate|violation|zeroize)(?=\\b|$)"
+        "config-commands": {
+          "patterns": [
+            {
+              "name": "keyword.other.config-keyword.config-commands.cisco",
+              "match": "(?i)(^|\\s)(access-class|access-list|algorithm|algorithm-type|autostate|banner|boot|bpdu|broadcast-key|bridge-group|bridge|channel-group|channel-protocol|channel|class|class-map|client-identifier|configure|copy|default-router|description|device-tracking|diagnostic|dir|dns-server|domain-lookup|domain-name|domain|dot11|dot1x|duplex|encryption|encapsulation|errdisable|group2aaa|hostname|input|int|install|interface|IP-Address|ip|lease|line|lldp|license|mbssid|method|mls|mpls|name|nd|netbios-name-server|netbios-node-type|neighbors|ntp|ok\\?|police|policy-map|power|process|reauth-period|redistribute|request|route-map|router|rsa|rts|security|service-policy|service|sntp|software|spanning-tree|speed|startup-config|storm-control|stackwise-virtual|sync|switch|switchport|tacacs-server|udld|vtp|wlccp|wr|world-mode|username|vrf)(?=\\b|$)"
+            }
+          ]
         },
-        {
-          "name": "keyword.other.config-keyword.group4.cisco",
-          "match": "(?i)(^|\\s)(addon|activate|active|aging|allow|allowed|authenticate|authentication-key|auto-copy|auto-upgrade|binding|boot-start-marker|both|clean|commit|conform-action|complete|detail|desirable|enable|enabled|established|full|generate|gt|in|insertion|maximum|optimize|on|on-success|permit|privilege|receive|relay|reload|ro|rw|set|show|send-community|success|trust|transmit|trusted-key|update-source|verify|yes)(?=\\b|$)"
+        "operational-states": {
+          "patterns": [
+            {
+              "name": "keyword.other.config-keyword.operational-states.cisco",
+              "match": "(?i)(^|\\s)(boot-end-marker|cause|clear|crashinfo|delete|down|drop|end|error|erase|exception|exceed-action|exec-timeout|exit|exit-address-family|expired|failure|gbic-invalid|ignore|inactive|inactivity|limit|max-fail|misconfig|none|off|on-failure|out|outside|removal|removed|reset|restrict|session-timeout|shutdown|standby|stop-record|system-shutdown|theft|timeout|unassigned|unset|validate|violation|zeroize)(?=\\b|$)"
+            }
+          ]
         },
-        {
-          "name": "keyword.other.config-keyword.group5.cisco",
-          "match": "(?i)(^|\\s)(address-family|allow-hint|automatic|buffered|channel-misconfig|debugging|default-gateway|etherchannel|extended|general-keys|if-authenticated|inspection|interval|IPDT_POLICY|label|link-local|lookup|managed-config-flag|md5|motd|mtu|negotiation|no-autoconfig|option|other-config-flag|packet|portfast|provision|renumber|route-target|scrypt|smart|snooping|standard|sticky|stopbits|terminal|transparent)(?=\\b|$)"
+        "control-actions": {
+          "patterns": [
+            {
+              "name": "keyword.other.config-keyword.control-actions.cisco",
+              "match": "(?i)(^|\\s)(addon|activate|active|aging|allow|allowed|authenticate|authentication-key|auto-copy|auto-upgrade|binding|boot-start-marker|both|clean|commit|conform-action|complete|detail|desirable|enable|enabled|established|full|generate|gt|in|insertion|maximum|optimize|on|on-success|permit|privilege|receive|relay|reload|ro|rw|set|show|send-community|success|trust|transmit|trusted-key|update-source|verify|yes)(?=\\b|$)"
+            }
+          ]
         },
-        {
-          "name": "keyword.other.config-keyword.group6.cisco",
-          "match": "(?i)(^|\\s)(all|auto-summary|bgp|default|dscp|echo|eigrp|fragments|ftp|ftp-data|gopher|http|ident|imap|isakmp|ipv4|ipv6|lacp|log-input|nntp|ospf|pagp|ping|pop3|rip|scp|snmp|snmp-server|smtp|sonet|ssh|telnet|tcp|tftp|www)(?=\\b|$)"
+        "advanced-options": {
+          "patterns": [
+            {
+              "name": "keyword.other.config-keyword.advanced-options.cisco",
+              "match": "(?i)(^|\\s)(address-family|allow-hint|automatic|buffered|channel-misconfig|debugging|default-gateway|etherchannel|extended|general-keys|if-authenticated|inspection|interval|IPDT_POLICY|label|link-local|lookup|managed-config-flag|md5|motd|mtu|negotiation|no-autoconfig|option|other-config-flag|packet|portfast|provision|renumber|route-target|scrypt|smart|snooping|standard|sticky|stopbits|terminal|transparent)(?=\\b|$)"
+            }
+          ]
+        },
+        "routing-protocols": {
+          "patterns": [
+            {
+              "name": "keyword.other.config-keyword.routing-protocols.cisco",
+              "match": "(?i)(^|\\s)(all|auto-summary|bgp|default|dscp|echo|eigrp|fragments|ftp|ftp-data|gopher|http|ident|imap|isakmp|ipv4|ipv6|lacp|log-input|nntp|ospf|pagp|ping|pop3|rip|scp|snmp|snmp-server|smtp|sonet|ssh|telnet|tcp|tftp|www)(?=\\b|$)"
+            }
+          ]
         }
-      ]
+      }
     },
     "interface_type": {
       "patterns": [
@@ -399,22 +459,6 @@
         }
       ]
     },
-    "param1": {
-      "patterns": [
-        {
-          "name": "punctuation.config-param.first.cisco",
-          "match": "(?<=^\\s*)\\S+"
-        }
-      ]
-    },
-    "param2": {
-      "patterns": [
-        {
-          "name": "punctuation.config-param.second.cisco",
-          "match": "(?<=^\\s*\\S+\\s+)\\S+"
-        }
-      ]
-    },
     "vrf": {
       "patterns": [
         {
@@ -513,70 +557,92 @@
       }
     },
     "group": {
-      "patterns": [
-        { "include": "#class" },
-        { "include": "#service-policy" },
-        { "include": "#policy-map" },
-        { "include": "#class-map" },
-        { "include": "#route-map" },
-        { "include": "#prefix-list" },
-        { "include": "#object-group" },
-        { "include": "#pool" },
-        { "include": "#policy-list" },
-        { "include": "#traffic-filter" },
-        { "include": "#community" }
-      ],
+      "patterns": [{ "include": "#group-modules" }],
       "repository": {
-        "class": {
-          "match": "(?i)(?<=class\\s(.*\\s)?)(\\S+)$",
-          "name": "entity.name.tag.group.class.name.cisco"
+        "group-modules": {
+          "patterns": [
+            { "include": "#qos-module" },
+            { "include": "#routing-module" },
+            { "include": "#bgp-module" },
+            { "include": "#security-module" },
+            { "include": "#traffic-module" },
+            { "include": "#resource-module" }
+          ]
         },
-        "service-policy": {
-          "match": "(?i)(?<=service-policy\\s(.*\\s)?)(\\S+)$",
-          "name": "entity.name.tag.group.service-policy.name.cisco"
-        },
-        "policy-map": {
-          "match": "(?i)(?<=policy-map\\s(.*\\s)?)(\\S+)$",
-          "name": "entity.name.tag.group.policy-map.name.cisco"
-        },
-        "class-map": {
-          "match": "(?i)(?<=class-map\\s(.*\\s)?)(\\S+)$",
-          "name": "entity.name.tag.group.class-map.name.cisco"
-        },
-        "route-map": {
-          "match": "(?i)(?<=route-map\\s)(\\S+)\\b",
-          "name": "entity.name.tag.group.route-map.name.cisco"
-        },
-        "prefix-list": {
-          "match": "(?i)(?<=prefix-list\\s)(\\S+)\\b",
-          "name": "entity.name.tag.group.prefix-list.name.cisco"
-        },
-        "object-group": {
-          "match": "(?i)(?<=object-group\\s)((service|network)\\s)?(\\S+)\\b",
-          "captures": {
-            "2": {
-              "name": "keyword.other.group.object-group.type.cisco"
+        "qos-module": {
+          "patterns": [
+            {
+              "match": "(?i)(?<=class\\s(.*\\s)?)(\\S+)$",
+              "name": "entity.name.tag.group.qos.class.name.cisco"
             },
-            "3": {
-              "name": "entity.name.tag.group.object-group.name.cisco"
+            {
+              "match": "(?i)(?<=service-policy\\s(.*\\s)?)(\\S+)$",
+              "name": "entity.name.tag.group.qos.service-policy.name.cisco"
+            },
+            {
+              "match": "(?i)(?<=policy-map\\s(.*\\s)?)(\\S+)$",
+              "name": "entity.name.tag.group.qos.policy-map.name.cisco"
+            },
+            {
+              "match": "(?i)(?<=class-map\\s(.*\\s)?)(\\S+)$",
+              "name": "entity.name.tag.group.qos.class-map.name.cisco"
             }
-          }
+          ]
         },
-        "pool": {
-          "match": "(?i)(?<=\\bpool\\s)(\\S+)\\b",
-          "name": "entity.name.tag.group.pool.name.cisco"
+        "routing-module": {
+          "patterns": [
+            {
+              "match": "(?i)(?<=route-map\\s)(\\S+)\\b",
+              "name": "entity.name.tag.group.routing.route-map.name.cisco"
+            },
+            {
+              "match": "(?i)(?<=prefix-list\\s)(\\S+)\\b",
+              "name": "entity.name.tag.group.routing.prefix-list.name.cisco"
+            }
+          ]
         },
-        "policy-list": {
-          "match": "(?i)(?<=policy-list\\s)(\\S+)\\b",
-          "name": "entity.name.tag.group.policy-list.name.cisco"
+        "bgp-module": {
+          "patterns": [
+            {
+              "match": "(?i)(?<=community\\s)(\\S+)\\b",
+              "name": "entity.name.tag.group.bgp.community.name.cisco"
+            }
+          ]
         },
-        "traffic-filter": {
-          "match": "(?i)(?<=traffic-filter\\s)(\\S+)\\b",
-          "name": "entity.name.tag.group.traffic-filter.name.cisco"
+        "security-module": {
+          "patterns": [
+            {
+              "match": "(?i)(?<=object-group\\s)((service|network)\\s)?(\\S+)\\b",
+              "captures": {
+                "2": {
+                  "name": "keyword.other.group.security.object-group.type.cisco"
+                },
+                "3": {
+                  "name": "entity.name.tag.group.security.object-group.name.cisco"
+                }
+              }
+            }
+          ]
         },
-        "community": {
-          "match": "(?i)(?<=community\\s)(\\S+)\\b",
-          "name": "entity.name.tag.group.community.name.cisco"
+        "traffic-module": {
+          "patterns": [
+            {
+              "match": "(?i)(?<=traffic-filter\\s)(\\S+)\\b",
+              "name": "entity.name.tag.group.traffic.traffic-filter.name.cisco"
+            }
+          ]
+        },
+        "resource-module": {
+          "patterns": [
+            {
+              "match": "(?i)(?<=\\bpool\\s)(\\S+)\\b",
+              "name": "entity.name.tag.group.resource.pool.name.cisco"
+            },
+            {
+              "match": "(?i)(?<=policy-list\\s)(\\S+)\\b",
+              "name": "entity.name.tag.group.resource.policy-list.name.cisco"
+            }
+          ]
         }
       }
     },
@@ -584,7 +650,12 @@
       "patterns": [
         { "include": "#access-class" },
         { "include": "#access-list" },
-        { "include": "#access-group" }
+        { "include": "#access-group" },
+        { "include": "#acl-protocols" },
+        { "include": "#acl-tcp-flags" },
+        { "include": "#acl-icmp-types" },
+        { "include": "#acl-options" },
+        { "include": "#acl-port-operators" }
       ],
       "repository": {
         "access-list": {
@@ -614,6 +685,26 @@
             "3": { "name": "entity.name.tag.acl.access-group.name.cisco" },
             "4": { "name": "keyword.other.acl.access-group.type.cisco" }
           }
+        },
+        "acl-protocols": {
+          "name": "keyword.other.acl.protocol.cisco",
+          "match": "(?i)\\b(gre|esp|ahp|pim|ipinip|nos|icmpv6|udp|igmp|ipv6|pcp|sctp)\\b"
+        },
+        "acl-tcp-flags": {
+          "name": "keyword.other.acl.tcp-flag.cisco",
+          "match": "(?i)\\b(ack|fin|psh|rst|syn|urg)\\b"
+        },
+        "acl-icmp-types": {
+          "name": "keyword.other.acl.icmp-type.cisco",
+          "match": "(?i)\\b(mobile-registration-request|mobile-registration-reply|datagram-conversion-error|domain-name-request|domain-name-reply|ipv6-where-are-you|mobile-host-redirect|router-advertisement|router-solicitation|timestamp-request|timestamp-reply|information-request|information-reply|parameter-problem|mobile-redirect|ipv6-i-am-here|conversion-error|alternate-address|time-exceeded|source-quench|mask-request|mask-reply|echo-reply|unreachable|traceroute|redirect|photuris|skip|echo)(?=\\s|\\b|$)"
+        },
+        "acl-options": {
+          "name": "keyword.other.acl.option.cisco",
+          "match": "(?i)\\b(time-range|precedence|tos|ttl|packet-length|reflect|evaluate|dynamic|timeout|log|option|sequence)(?=\\s|\\b|$)"
+        },
+        "acl-port-operators": {
+          "name": "keyword.other.acl.port-operator.cisco",
+          "match": "(?i)\\b(neq|lt|range)\\b"
         }
       }
     },

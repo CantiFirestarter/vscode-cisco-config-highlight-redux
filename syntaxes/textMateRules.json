@@ -350,6 +350,36 @@
         }
       },
       {
+        "scope": "keyword.other.acl.protocol",
+        "settings": {
+          "foreground": "#FFA500"
+        }
+      },
+      {
+        "scope": "keyword.other.acl.tcp-flag",
+        "settings": {
+          "foreground": "#FF1493"
+        }
+      },
+      {
+        "scope": "keyword.other.acl.icmp-type",
+        "settings": {
+          "foreground": "#00CED1"
+        }
+      },
+      {
+        "scope": "keyword.other.acl.option",
+        "settings": {
+          "foreground": "#9370DB"
+        }
+      },
+      {
+        "scope": "keyword.other.acl.port-operator",
+        "settings": {
+          "foreground": "#FFD700"
+        }
+      },
+      {
         "scope": "keyword.other.address.cidr",
         "settings": {
           "foreground": "#2e74b5"
@@ -488,37 +518,67 @@
         }
       },
       {
-        "scope": "keyword.other.config-keyword.group1",
+        "scope": "keyword.other.config-keyword.network-protocols.security-aaa",
         "settings": {
           "foreground": "#ff9933"
         }
       },
       {
-        "scope": "keyword.other.config-keyword.group2",
+        "scope": "keyword.other.config-keyword.network-protocols.wireless",
+        "settings": {
+          "foreground": "#ff9933"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.network-protocols.ip-routing",
+        "settings": {
+          "foreground": "#ff9933"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.network-protocols.system-logging",
+        "settings": {
+          "foreground": "#ff9933"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.network-protocols.layer2",
+        "settings": {
+          "foreground": "#ff9933"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.network-protocols.mgmt-interfaces",
+        "settings": {
+          "foreground": "#ff9933"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.config-commands",
         "settings": {
           "foreground": "#3333ff"
         }
       },
       {
-        "scope": "keyword.other.config-keyword.group3",
+        "scope": "keyword.other.config-keyword.operational-states",
         "settings": {
           "foreground": "#ff3333"
         }
       },
       {
-        "scope": "keyword.other.config-keyword.group4",
+        "scope": "keyword.other.config-keyword.control-actions",
         "settings": {
           "foreground": "#9933ff"
         }
       },
       {
-        "scope": "keyword.other.config-keyword.group5",
+        "scope": "keyword.other.config-keyword.advanced-options",
         "settings": {
           "foreground": "#33df33"
         }
       },
       {
-        "scope": "keyword.other.config-keyword.group6",
+        "scope": "keyword.other.config-keyword.routing-protocols",
         "settings": {
           "foreground": "#d633d6"
         }
@@ -605,18 +665,6 @@
         "scope": "meta.function-call.command-disable.unused",
         "settings": {
           "foreground": "#ff3333"
-        }
-      },
-      {
-        "scope": "punctuation.config-param.first",
-        "settings": {
-          "foreground": "#fff"
-        }
-      },
-      {
-        "scope": "punctuation.config-param.second",
-        "settings": {
-          "foreground": "#fff"
         }
       },
       {

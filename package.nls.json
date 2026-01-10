@@ -80,6 +80,21 @@
   "configuration.properties.colors.keyword.shutdown.description": "keyword.other.config-keyword.shutdown",
   "configuration.properties.colors.keyword.remark.description": "keyword.other.config-keyword.remark",
 
+  "_comment_colors_keyword_protocols": "Token Colors - Network Protocols",
+  "configuration.properties.colors.keyword.network-protocols.security-aaa.description": "keyword.other.config-keyword.network-protocols.security-aaa",
+  "configuration.properties.colors.keyword.network-protocols.wireless.description": "keyword.other.config-keyword.network-protocols.wireless",
+  "configuration.properties.colors.keyword.network-protocols.ip-routing.description": "keyword.other.config-keyword.network-protocols.ip-routing",
+  "configuration.properties.colors.keyword.network-protocols.system-logging.description": "keyword.other.config-keyword.network-protocols.system-logging",
+  "configuration.properties.colors.keyword.network-protocols.layer2.description": "keyword.other.config-keyword.network-protocols.layer2",
+  "configuration.properties.colors.keyword.network-protocols.mgmt-interfaces.description": "keyword.other.config-keyword.network-protocols.mgmt-interfaces",
+
+  "_comment_colors_keyword_commands": "Token Colors - Commands & States",
+  "configuration.properties.colors.keyword.config-commands.description": "keyword.other.config-keyword.config-commands",
+  "configuration.properties.colors.keyword.operational-states.description": "keyword.other.config-keyword.operational-states",
+  "configuration.properties.colors.keyword.control-actions.description": "keyword.other.config-keyword.control-actions",
+  "configuration.properties.colors.keyword.advanced-options.description": "keyword.other.config-keyword.advanced-options",
+  "configuration.properties.colors.keyword.routing-protocols.description": "keyword.other.config-keyword.routing-protocols",
+
   "_comment_colors_vrf": "Token Colors - VRF",
   "configuration.properties.colors.vrf.declaration.description": "entity.name.class.vrf.declaration",
   "configuration.properties.colors.vrf.forwarding.description": "entity.other.vrf.forwarding",
@@ -120,6 +135,13 @@
   "configuration.properties.colors.group.traffic-filter.name.description": "entity.name.tag.group.traffic-filter.name",
   "configuration.properties.colors.group.community.name.description": "entity.name.tag.group.community.name",
 
+  "_comment_colors_groups_extended": "Token Colors - Groups Extended",
+  "configuration.properties.colors.group.qos.class.name.description": "entity.name.tag.group.qos.class.name",
+  "configuration.properties.colors.group.qos.service-policy.name.description": "entity.name.tag.group.qos.service-policy.name",
+  "configuration.properties.colors.group.qos.policy-map.name.description": "entity.name.tag.group.qos.policy-map.name",
+  "configuration.properties.colors.group.routing.route-map.name.description": "entity.name.tag.group.routing.route-map.name",
+  "configuration.properties.colors.group.resource.pool.name.description": "entity.name.tag.group.resource.pool.name",
+
   "_comment_colors_acl": "Token Colors - ACL",
   "configuration.properties.colors.acl.access-list.name.description": "entity.name.tag.acl.access-list.name",
   "configuration.properties.colors.acl.access-list.type.description": "keyword.other.acl.access-list.type",
@@ -127,6 +149,11 @@
   "configuration.properties.colors.acl.access-class.type.description": "keyword.other.acl.access-class.type",
   "configuration.properties.colors.acl.access-group.name.description": "entity.name.tag.acl.access-group.name",
   "configuration.properties.colors.acl.access-group.type.description": "keyword.other.acl.access-group.type",
+  "configuration.properties.colors.acl.protocol.description": "keyword.other.acl.protocol",
+  "configuration.properties.colors.acl.tcp-flag.description": "keyword.other.acl.tcp-flag",
+  "configuration.properties.colors.acl.icmp-type.description": "keyword.other.acl.icmp-type",
+  "configuration.properties.colors.acl.option.description": "keyword.other.acl.option",
+  "configuration.properties.colors.acl.port-operator.description": "keyword.other.acl.port-operator",
 
   "_comment_colors_crypto": "Token Colors - Crypto",
   "configuration.properties.colors.crypto.crypto-map.name.description": "entity.name.tag.crypto.crypto-map.name",
@@ -137,6 +164,9 @@
 
   "_comment_colors_arp": "Token Colors - ARP",
   "configuration.properties.colors.arp-insp-val.description": "meta.function-call.arp-insp-val",
+  "configuration.properties.colors.arp-insp-val.src-mac.description": "constant.other.arp-insp-val.src-mac",
+  "configuration.properties.colors.arp-insp-val.dst-mac.description": "constant.other.arp-insp-val.dst-mac",
+  "configuration.properties.colors.arp-insp-val.ip.description": "constant.other.arp-insp-val.ip",
 
   "_comment_colors_command": "Token Colors - Command Hostname",
   "configuration.properties.colors.command_hostname.user-mode.description": "meta.function-call.command_hostname.user-mode",
