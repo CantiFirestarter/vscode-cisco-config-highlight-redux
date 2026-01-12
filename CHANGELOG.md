@@ -18,6 +18,9 @@
 - License updates and revised copyright information in README
 - Enhanced README documentation with improved syntax coverage notes and token color customization details
 - Version updates in package.json and related files
+- Reorganized syntax for clarity
+- Renamed token Groups 1-6 to network-protocols, config-comands, operational-states, control-actions, advanced-options, routing-protocols.
+- Split network-protocols into six subcategory sections. (security-aaa, wireless, ip-routing, system-logging, layer2, mgmt-interfaces)
 
 ### Fixed
 
