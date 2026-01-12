@@ -682,7 +682,7 @@
               "comment": "Security & Identity (AAA) - Authentication, Authorization, Crypto, Certificates, Keys",
               "name": "keyword.other.config-keyword.network-protocols.security-aaa.cisco",
               "match": "(?i)(^|\\s)(aaa_server|acct-port|aes-ccm|auth-proxy|auth-port|auth|authenticate-fail|authentication-server|authentication|authorization|block-unknown-source|certificate|ciphers|crypto|deauthenticate|enrollment|group2aaa|ipsec|key-management|key|login|password-encryption|passwords|password|pki|port-security|radius|secret|secure-server|self-signed|selfsigned|subscriber-loop-control|tacacs+)(?=\\b|$)"
-            }
+            },
             {
               "comment": "Wireless Networking (Dot11 & SSID) - 802.11, Access Points, Wireless Security",
               "name": "keyword.other.config-keyword.network-protocols.wireless.cisco",
@@ -692,7 +692,7 @@
               "comment": "IP Services & Routing - DHCP, DNS, Routing, NAT, QoS, Network Services",
               "name": "keyword.other.config-keyword.network-protocols.ip-routing.cisco",
               "match": "(?i)(^|\\s)(action|address|admission|advertise-v2|attach-policy|basic-summary-address|bootpc|bootps|cef|classless|cs4|default-router|destination|dhcp|dns-server|domain-name|eq|excluded-address|forward-protocol|general-prefix|h-node|helper-address|host|icmp|inside|irb|iso|lease|nat|nat-transparency|netbios-dgm|netbios-ns|netbios-name-server|netbios-node-type|network|next-hop|pool|prefix|priority|proxy-arp|qos|ra|ratelimit|redirects|route-cache|router-id|route|routing|rp|static|subnet-zero|summary-address|summary|traffic-filter|tracking|translation|translations|type|udp-encaps|udp-port|udp|unicast-routing|unreachables)(?=\\b|$)"
-            }
+            },
             {
               "comment": "System Management & Logging - Syslog, SNMP, NetFlow, Config, Timers, Resources",
               "name": "keyword.other.config-keyword.network-protocols.system-logging.cisco",
